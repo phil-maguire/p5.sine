@@ -1,6 +1,6 @@
 //web browser sine wave instrument
 //written with assistance from Stephen Roddy & Sebastian Adams
-//Hi
+
 //const - never changes
 //let - updatable
 
@@ -36,14 +36,26 @@ ringMod.connect(osc.frequency);
 //to turn on audio on the first mouse click
 let audioOn = false 
 
-let touchEnd = false;
-let touchStart = false;
+//let touchEnd = false;
+//let touchStart = false;
 
 function setup() {
   createCanvas(windowWidth, windowHeight); //width first, then height. otherwise doesn't fill screen
-    colorMode(RGB, 255);
-    textAlign(CENTER, CENTER);
-    textFont('Courier New');    
+  colorMode(RGB, 255);
+  textAlign(CENTER, CENTER);
+  textFont('Courier New');   
+ 
+
+
+ /*  //Button stuff. This button won't do anything until you add the p5.sound library back in the index.html file
+  button = createButton("Audio"); 
+  button.mouseClicked(audioSound);
+  button.size(200,100);
+  button.position(10,10);
+  button.style("font-family", "Courier");
+  button.style("font-size", "48px");
+
+  */
 }
 
 function draw() {
@@ -97,7 +109,7 @@ if (mouseIsPressed || touches.length > 0) {
   
   let textScale = windowWidth * 0.025; //text size = 2.5% of screen size
   textSize(textScale);
-  text('Touch/click and drag anywhere on the screen', width / 2, height / 2);
+  text('Tap once, then touch/click and drag anywhere on the screen', width / 2, height / 2);
   text('X axis: sine wave', width / 2, height - 60);
   text('Y axis: ring modulated sine wave', width / 2, height - 30);
 
@@ -105,6 +117,12 @@ if (mouseIsPressed || touches.length > 0) {
 
 
 }
+/*  //Button stuff. This button won't do anything until you add the p5.sound library back in the index.html file as  userStartAudio() is contained in the p5.soudn library
+
+function audioSound(){
+  userStartAudio();
+}
+  /*
 //sine wave function
 function niceTone(x, y){
 
@@ -158,3 +176,6 @@ document.ontouchstart = async function(event) {
 document.ontouchmove = function(event) {
   event.preventDefault();
 };
+
+*/
+
