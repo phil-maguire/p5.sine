@@ -122,7 +122,7 @@ if (mouseIsPressed || touches.length > 0) {
 function audioSound(){
   userStartAudio();
 }
-  /*
+  */
 //sine wave function
 function niceTone(x, y){
 
@@ -176,6 +176,3 @@ document.ontouchstart = async function(event) {
 document.ontouchmove = function(event) {
   event.preventDefault();
 };
-
-*/
-
