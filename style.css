@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Courier New', Courier, monospace;
+
+  /* below prevents scrolling, highlighting
+  and text selection */
+  overflow: hidden;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+
+canvas {
+  display: block;
+}
